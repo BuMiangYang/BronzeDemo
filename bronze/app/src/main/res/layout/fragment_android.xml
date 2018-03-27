@@ -7,8 +7,6 @@
     android:background="@android:color/white"
     tools:context="dictation.appcode.com.bapp.ui.MainActivity">
 
-
-
     <TextView
         android:layout_width="wrap_content"
         android:text="~ Android ~"

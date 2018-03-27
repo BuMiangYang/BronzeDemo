@@ -8,4 +8,8 @@ import android.support.multidex.MultiDexApplication;
 
 public class BApp extends MultiDexApplication {
 
+    @Override
+    public void onCreate() {
+        super.onCreate();
+    }
 }

@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import dictation.appcode.com.bapp.utlis.ToolBarUtils;
 
 public abstract class BaseActivity<V, T extends BasePresenter<V>> extends AppCompatActivity {
 
@@ -52,7 +51,7 @@ public abstract class BaseActivity<V, T extends BasePresenter<V>> extends AppCom
      * 可以设置WindowFeature(如：this.requestWindowFeature(Window.FEATURE_NO_TITLE);)
      */
     public void init() {
-        ToolBarUtils.isChangeThemeStyle(this,true);
+
     }
 
     /**

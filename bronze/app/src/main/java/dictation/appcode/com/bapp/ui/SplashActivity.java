@@ -9,7 +9,6 @@ import butterknife.BindView;
 import dictation.appcode.com.bapp.R;
 import dictation.appcode.com.bapp.base.BaseActivity;
 import dictation.appcode.com.bapp.base.BasePresenter;
-import dictation.appcode.com.bapp.utlis.ToolBarUtils;
 import jp.wasabeef.glide.transformations.BlurTransformation;
 
 import static com.bumptech.glide.request.RequestOptions.bitmapTransform;
@@ -24,7 +23,7 @@ public class SplashActivity extends BaseActivity {
     @Override
     public void init() {
 
-        ToolBarUtils.isChangeThemeStyle(this,true);
+//        ToolBarUtils.isChangeThemeStyle(this,true);
 
     }
 

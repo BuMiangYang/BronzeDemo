@@ -23,6 +23,10 @@ import dictation.appcode.com.bapp.ui.home.HomeIndexFragment;
 import dictation.appcode.com.bapp.ui.read.ReadIndexFragment;
 import dictation.appcode.com.bapp.ui.user.UserIndexFragment;
 
+/**
+ * 主页TAB 模块
+ */
+
 public class MainActivity extends BaseActivity<MainView,MainPresenter>
         implements NavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener {
 
