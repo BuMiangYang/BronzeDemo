@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">BApp</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string name="title_home">Home</string>
+    <string name="title_read">Read</string>
+    <string name="title_me">Me</string>
+
+    <!--我的-->
+    <string name="my_chat_account">微信号:%1$s</string>
+    <string name="jian_shu">简书</string>
+    <string name="setting">设置</string>
+    <string name="qr_code_card_tip">扫一扫上面的二维码图案，加我微信</string>
+
+
+</resources>
