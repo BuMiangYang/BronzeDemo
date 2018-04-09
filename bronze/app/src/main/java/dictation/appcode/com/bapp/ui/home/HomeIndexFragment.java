@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.util.Pair;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,14 +24,11 @@ public class HomeIndexFragment extends BaseFragment {
 
     private MainActivity mContext;
 
-    private String[] mTitles = new String[]{"推荐", "连载", "专题"};
 
     @BindView(R.id.tab_layout) TabLayout mTabLayout;
     @BindView(R.id.home_viewpager) ViewPager mViewPager;
 
-    private List<Fragment> mListFragments;
-
-
+    private List<Pair<String, Fragment>> mListFragments;
 
     @Override
     public void onAttach(Context context) {
@@ -41,18 +39,13 @@ public class HomeIndexFragment extends BaseFragment {
     @Override
     public void initData() {
 
-        for(String tab: mTitles){
-            mTabLayout.addTab(mTabLayout.newTab().setText(tab));
-        }
-
         mListFragments = new ArrayList<>();
-        mListFragments.add(new AndroidFragment());
-        mListFragments.add(new IosFragment());
-        mListFragments.add(new WelfareFragment());
+        mListFragments.add(new Pair<String, Fragment>("推荐", new AndroidFragment()));
+        mListFragments.add(new Pair<String, Fragment>("连载", new TestFragment()));
+        mListFragments.add(new Pair<String, Fragment>("专题", new IosFragment()));
+        mListFragments.add(new Pair<String, Fragment>("未知", new WelfareFragment()));
 
-
-
-        HomeAdapter homeAdapter = new HomeAdapter(getChildFragmentManager(), mContext, mListFragments, mTitles);
+        HomeAdapter homeAdapter = new HomeAdapter(getChildFragmentManager(), mListFragments);
         mViewPager.setAdapter(homeAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
 

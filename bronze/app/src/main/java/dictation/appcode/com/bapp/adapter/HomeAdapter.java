@@ -1,9 +1,9 @@
 package dictation.appcode.com.bapp.adapter;
 
-import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.util.Pair;
 
 import java.util.List;
 
@@ -11,15 +11,11 @@ import java.util.List;
  * 描述: HomeFragment中的ViewPage适配器
  */
 public class HomeAdapter extends FragmentPagerAdapter {
-    private Context mContext;
-    private List<Fragment> mList;
-    private String[] mTitles;
+    private List<Pair<String, Fragment>> mList;
 
-    public HomeAdapter(FragmentManager fm, Context mContext, List<Fragment> mList, String[] mTitles) {
+    public HomeAdapter(FragmentManager fm,  List<Pair<String, Fragment>> mList) {
         super(fm);
         this.mList = mList;
-        this.mContext = mContext;
-        this.mTitles = mTitles;
     }
 
     @Override
@@ -29,16 +25,11 @@ public class HomeAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return mList.get(position);
-    }
-
-
-    public void setmList(List<Fragment> mList) {
-        this.mList = mList;
+        return mList.get(position).second;
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return mTitles[position];
+        return mList.get(position).first;
     }
 }
