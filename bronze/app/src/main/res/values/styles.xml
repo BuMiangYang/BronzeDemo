@@ -6,10 +6,15 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@android:color/transparent</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+
     </style>
 
     <!--启动页白屏解决样式-->
-    <style name="launchTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="launchTheme" parent="AppTheme">
 
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowContentOverlay">@android:color/transparent</item>

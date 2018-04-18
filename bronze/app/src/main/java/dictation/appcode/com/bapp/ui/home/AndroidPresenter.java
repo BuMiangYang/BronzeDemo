@@ -3,7 +3,6 @@ package dictation.appcode.com.bapp.ui.home;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 
@@ -14,6 +13,7 @@ import dictation.appcode.com.bapp.adapter.AndroidFragmentAdapter;
 import dictation.appcode.com.bapp.base.BaseActivity;
 import dictation.appcode.com.bapp.base.BasePresenter;
 import dictation.appcode.com.bapp.entity.WorkInfo;
+import dictation.appcode.com.bapp.ui.read.ReadDetailActivity;
 
 
 /**
@@ -128,8 +128,9 @@ public class AndroidPresenter extends BasePresenter<AndroidView> implements Base
     @Override
     public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
 
-        Toast.makeText(mContext, "点击事件", Toast.LENGTH_LONG).show();
+//        Toast.makeText(mContext, "点击事件", Toast.LENGTH_LONG).show();
 
+        ReadDetailActivity.runActivity(mContext);
     }
 
 

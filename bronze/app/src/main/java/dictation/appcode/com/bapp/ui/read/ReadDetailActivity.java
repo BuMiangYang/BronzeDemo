@@ -1,10 +1,18 @@
 package dictation.appcode.com.bapp.ui.read;
 
+import android.content.Context;
+import android.content.Intent;
+
 import dictation.appcode.com.bapp.R;
 import dictation.appcode.com.bapp.base.BaseActivity;
 
 public class ReadDetailActivity extends BaseActivity<DetailView, DetailPresenter> implements DetailView {
 
+    public static void runActivity(Context context){
+
+        Intent intent = new Intent(context,ReadDetailActivity.class);
+        context.startActivity(intent);
+    }
     /**
      * 绑定布局ID
      *

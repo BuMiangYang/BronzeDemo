@@ -122,6 +122,7 @@ public class ReadPresenter extends BasePresenter<ReadView> implements BaseQuickA
     @Override
     public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
 
+        ReadDetailActivity.runActivity(mContext);
     }
 }
 

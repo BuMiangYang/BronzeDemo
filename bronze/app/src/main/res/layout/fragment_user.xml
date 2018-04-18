@@ -14,8 +14,20 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        app:title="我的"
-        app:popupTheme="@style/AppTheme.PopupOverlay" />
+        app:title=""
+        app:titleTextColor="@color/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:text="我的"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="match_parent" />
+
+    </android.support.v7.widget.Toolbar>
 
     <RelativeLayout
         android:id="@+id/llUser"
