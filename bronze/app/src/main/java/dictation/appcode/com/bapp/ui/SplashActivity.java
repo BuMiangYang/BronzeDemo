@@ -28,6 +28,14 @@ public class SplashActivity extends BaseActivity {
     }
 
     /**
+     * 开始请求
+     */
+    @Override
+    protected void start() {
+
+    }
+
+    /**
      * 绑定布局ID
      *
      * @return

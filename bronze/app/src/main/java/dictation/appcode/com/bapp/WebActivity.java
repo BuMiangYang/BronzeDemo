@@ -73,6 +73,14 @@ public class WebActivity extends BaseActivity {
 
     }
 
+    /**
+     * 开始请求
+     */
+    @Override
+    protected void start() {
+
+    }
+
     @Override
     public void initData() {
 

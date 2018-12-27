@@ -1,5 +1,6 @@
 package dictation.appcode.com.bapp.ui.user;
 
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import butterknife.BindView;
@@ -9,6 +10,7 @@ import dictation.appcode.com.bapp.ui.MainActivity;
 
 /**
  * 描述：
+ * @author bmy
  */
 
 public class UserIndexFragment extends BaseFragment<UserView,UserPresenter> implements UserView{
@@ -21,6 +23,9 @@ public class UserIndexFragment extends BaseFragment<UserView,UserPresenter> impl
 
     @BindView(R.id.tvAccount)
     TextView mTvAccount;
+
+    @BindView(R.id.iv_search)
+    ImageView mSearchView;
 
 
     @Override
@@ -44,6 +49,11 @@ public class UserIndexFragment extends BaseFragment<UserView,UserPresenter> impl
 
         mOivAlbum.setOnClickListener(v -> mPresenter.jumpWebActivity());
 
+        mSearchView.setOnClickListener(view -> {
+
+            mPresenter.jumpSearch();
+        });
+
     }
     @Override
     public TextView getName() {
@@ -55,7 +65,10 @@ public class UserIndexFragment extends BaseFragment<UserView,UserPresenter> impl
         return mTvAccount;
     }
 
-
+    @Override
+    public ImageView getSearch() {
+        return mSearchView;
+    }
 
 
 }

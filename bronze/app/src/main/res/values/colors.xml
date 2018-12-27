@@ -21,4 +21,20 @@
 
     <color name="gray5">#EBEBEB</color>
 
+    <color name="backgroundColor">#EEEEEE</color>
+
+    <color name="color_translucent">#00000000</color>
+
+    <color name="color_gray">#9a9a9a</color>
+    <color name="color_black">#000000</color>
+
+    <color name="color_lighter_gray">#ddd</color>
+
+    <color name="color_darker_gray">#aaa</color>
+
+
+
+
+
+
 </resources>

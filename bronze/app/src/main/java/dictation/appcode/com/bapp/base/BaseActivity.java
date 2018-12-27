@@ -3,14 +3,26 @@ package dictation.appcode.com.bapp.base;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+
+import com.classic.common.MultipleStatusView;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
+/**
+ * @author bmy
+ */
 public abstract class BaseActivity<V, T extends BasePresenter<V>> extends AppCompatActivity {
 
     protected T mPresenter;
     public Unbinder unbinder;
+
+    /**
+     * 多种状态的 View 的切换
+     */
+    protected MultipleStatusView mLayoutStatusView = null;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,7 +49,21 @@ public abstract class BaseActivity<V, T extends BasePresenter<V>> extends AppCom
     }
 
     public void initListener() {
+        if(null != mLayoutStatusView ){
+            mLayoutStatusView.setOnClickListener(mRetryClickListener);
+        }
     }
+
+
+
+    View.OnClickListener mRetryClickListener =  new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+
+            start();
+        }
+    };
+
 
 
     public void initData() {
@@ -53,6 +79,11 @@ public abstract class BaseActivity<V, T extends BasePresenter<V>> extends AppCom
     public void init() {
 
     }
+
+    /**
+     * 开始请求
+     */
+    protected abstract void start();
 
     /**
      * 绑定布局ID
@@ -74,10 +105,9 @@ public abstract class BaseActivity<V, T extends BasePresenter<V>> extends AppCom
             // 解绑view
             mPresenter.detachView();
         }
-
-        if(unbinder!=null) {
+        if (unbinder != null) {
             unbinder.unbind();
-            unbinder=null;
+            unbinder = null;
         }
     }
 }

@@ -25,9 +25,11 @@ import dictation.appcode.com.bapp.ui.user.UserIndexFragment;
 
 /**
  * 主页TAB 模块
+ *
+ * @author bmy
  */
 
-public class MainActivity extends BaseActivity<MainView,MainPresenter>
+public class MainActivity extends BaseActivity<MainView, MainPresenter>
         implements NavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener {
 
 
@@ -39,8 +41,9 @@ public class MainActivity extends BaseActivity<MainView,MainPresenter>
     NavigationView navigationView;
     @BindView(R.id.vp_main)
     ViewPager mVpMain;
+    //底部导航
     @BindView(R.id.navigation)
-    BottomNavigationView mBottomNavigation;//底部导航
+    BottomNavigationView mBottomNavigation;
 
 
     private final int NAVIGATION_HOME = 0;
@@ -71,7 +74,6 @@ public class MainActivity extends BaseActivity<MainView,MainPresenter>
     };
 
 
-
     @Override
     public void initData() {
         setSupportActionBar(toolbar);
@@ -96,9 +98,17 @@ public class MainActivity extends BaseActivity<MainView,MainPresenter>
 
     }
 
+    /**
+     * 开始请求
+     */
+    @Override
+    protected void start() {
+
+    }
+
     @Override
     public void initListener() {
-
+        super.initListener();
         navigationView.setNavigationItemSelectedListener(this);
         mVpMain.addOnPageChangeListener(this);
         mBottomNavigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -123,7 +133,6 @@ public class MainActivity extends BaseActivity<MainView,MainPresenter>
     }
 
 
-
     private boolean isPrepareFinish = false;
 
     @Override
@@ -132,14 +141,13 @@ public class MainActivity extends BaseActivity<MainView,MainPresenter>
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         }
-        if(!isPrepareFinish){
+        if (!isPrepareFinish) {
             mVpMain.postDelayed(
-                    () -> isPrepareFinish = false,2000
+                    () -> isPrepareFinish = false, 2000
             );
             isPrepareFinish = true;
             Toast.makeText(this, "再按一次退出", Toast.LENGTH_SHORT).show();
-        }
-        else {
+        } else {
             super.onBackPressed();
         }
     }

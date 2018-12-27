@@ -40,8 +40,14 @@ dependencies {
     implementation 'jp.wasabeef:glide-transformations:3.1.1'
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
 
+    implementation project(':multiple-status-view')
 
 
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+
+}
+repositories {
+    mavenCentral()
 }

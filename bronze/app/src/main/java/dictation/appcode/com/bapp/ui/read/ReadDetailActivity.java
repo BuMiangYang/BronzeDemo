@@ -13,6 +13,15 @@ public class ReadDetailActivity extends BaseActivity<DetailView, DetailPresenter
         Intent intent = new Intent(context,ReadDetailActivity.class);
         context.startActivity(intent);
     }
+
+    /**
+     * 开始请求
+     */
+    @Override
+    protected void start() {
+
+    }
+
     /**
      * 绑定布局ID
      *
