@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorPrimary"
-    tools:context="dictation.appcode.com.bapp.ui.MainActivity">
+    tools:context="com.bapp.ui.MainActivity">
 
 
     <android.support.design.widget.TabLayout

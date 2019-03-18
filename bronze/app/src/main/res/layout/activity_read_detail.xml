@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/ic_main_head"
-    tools:context="dictation.appcode.com.bapp.ui.read.ReadDetailActivity">
+    tools:context="com.bapp.ui.read.ReadDetailActivity">
 
     <TextView
         android:layout_width="match_parent"

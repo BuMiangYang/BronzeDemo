@@ -32,4 +32,7 @@
     <string name="data_error">数据获取失败(ㄒoㄒ)~~</string>
     <string name="empty_view_hint">暂时木有内容呀~~</string>
 
+    <string name="facebook_app_id">783846568681686</string>
+    <string name="fb_login_protocol_scheme">fb783846568681686</string>
+
 </resources>

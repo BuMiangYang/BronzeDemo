@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorAccent"
     android:orientation="vertical"
-    tools:context="dictation.appcode.com.bapp.ui.MainActivity">
+    tools:context="com.bapp.ui.MainActivity">
 
 
     <android.support.design.widget.AppBarLayout

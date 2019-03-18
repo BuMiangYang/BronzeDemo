@@ -46,6 +46,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
+    // FaceBook
+    implementation 'com.facebook.android:facebook-android-sdk:4.41.0'
+
 
 }
 repositories {
