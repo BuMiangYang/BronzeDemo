@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 27
@@ -48,6 +49,14 @@ dependencies {
 
     // FaceBook
     implementation 'com.facebook.android:facebook-android-sdk:4.41.0'
+
+    // 微信
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // Google
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+
 
 
 }

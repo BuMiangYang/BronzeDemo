@@ -6,12 +6,39 @@
     android:orientation="vertical">
 
 
-    <com.facebook.login.widget.LoginButton
+    <TextView
         android:id="@+id/login_button"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center_horizontal" />
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/color_black"
+        android:gravity="center"
+        android:text="FaceBook登录" />
+
+    <TextView
+        android:id="@+id/login_wx"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/color_black"
+        android:gravity="center"
+        android:text="微信登录" />
+
+    <TextView
+        android:id="@+id/login_google"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/color_black"
+        android:gravity="center"
+        android:text="Google登录" />
+
 
     <TextView
         android:id="@+id/login_result"

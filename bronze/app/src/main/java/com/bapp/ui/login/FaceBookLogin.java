@@ -46,18 +46,16 @@ public class FaceBookLogin {
 
             @Override
             public void onCancel() {
+
                 //取消登录
-                if (facebookListener != null) {
-                    facebookListener.facebookLoginCancel();
-                }
+
             }
 
             @Override
             public void onError(FacebookException error) {
-                //登录出错
-                if (facebookListener != null) {
-                    facebookListener.facebookLoginFail(error.getMessage());
-                }
+
+                //登录错误
+
             }
         });
 
@@ -178,17 +176,7 @@ public class FaceBookLogin {
          */
         void facebookLoginSuccess(JSONObject object);
 
-        /**
-         * 登录失败
-         *
-         * @param message 失败信息
-         */
-        void facebookLoginFail(String message);
 
-        /**
-         * 取消登录
-         */
-        void facebookLoginCancel();
     }
 
 
