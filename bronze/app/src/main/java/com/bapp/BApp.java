@@ -11,5 +11,6 @@ public class BApp extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+
     }
 }
